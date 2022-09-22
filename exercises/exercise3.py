@@ -62,7 +62,7 @@ assert article.precio == 1.21
 
 article = Article(costo=1, nombre="Auto", descuento=0.21)
 assert article.nombre == "Auto"
-assert article.precio == 1
+assert article.precio == 0.96
 
 
 # Test de método de clase
@@ -70,5 +70,5 @@ Article.actualizar_iva(0.25)
 
 article = Article(costo=1, nombre="Auto")
 assert article.nombre == "Auto"
-assert article.precio == 1
+assert article.precio == 1.25
 # NO MODIFICAR - FIN
