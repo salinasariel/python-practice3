@@ -1,6 +1,9 @@
 """Variables de Clase y Métodos de Clase."""
 
 
+import string
+
+
 class Article:
     """Todos los artículos tienen un nombre y un costo, opcionalmente algunos
     tienen un porcentaje de descuento.
@@ -19,10 +22,18 @@ class Article:
         - No utilizar Dataclasses
         - No utilizar Properties
         - Utilizar Type Hints en todos los métodos y variables
-        PRUEBA1234
     """
+    def __init__(self, nombre: string):
+        self.nombre: string = nombre
 
+    def __init__(self, costo: float):
+        self.costo: float = costo
 
+    def __init__(self, descuento: int):
+        self.descuento: int = descuento
+
+    def precio(self):
+        return self.costo + (self.costo*0.21) - self.descuento
 # NO MODIFICAR - INICIO
 # Test parámetro obligatorio
 try:
