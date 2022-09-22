@@ -19,6 +19,7 @@ class Article:
         - No utilizar Dataclasses
         - No utilizar Properties
         - Utilizar Type Hints en todos los métodos y variables
+        PRUEBA1234
     """
 
 
