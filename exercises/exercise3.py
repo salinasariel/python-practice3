@@ -1,6 +1,10 @@
 """Properties"""
 
 
+import string
+from tokenize import String
+
+
 class Article:
     """Re-Escribir el ejercicio anterior utilizando una property en vez de un
     método de instancia.
@@ -14,8 +18,26 @@ class Article:
         - No utilizar Dataclasses
         - Utilizar Type Hints en todos los métodos y variables
     """
+    def __init__(self, nombre):
+        self.nombre: string = nombre
 
+    def __init__(self, descuento):
+        self.descuento: int = descuento
 
+    def __init__(self, costo):
+        self.costo: int = costo
+
+    @property
+    def dosdecimales(self):
+        return round(self.costo, 2)
+
+    @dosdecimales.setter
+    def precio(self, costo):
+        self.costo = costo
+
+    def preciofinal(self):
+        self.precio = (self.costo - self.descuento)+((self.costo- self.descuento)*0.21)
+        return self.precio
 # NO MODIFICAR - INICIO
 # Test parámetro obligatorio
 try:
