@@ -38,6 +38,10 @@ class Article:
     def preciofinal(self):
         self.precio = (self.costo - self.descuento)+((self.costo- self.descuento)*0.21)
         return self.precio
+
+    @classmethod
+    def actualizar_iva(self):
+        return self.actualizar_iva
 # NO MODIFICAR - INICIO
 # Test parámetro obligatorio
 try:
