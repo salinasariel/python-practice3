@@ -22,7 +22,14 @@ Restricciones:
     - No utilizar properties
     - Utilizar Type Hints en todos los métodos y variables
 """
+@dataclass
+class Materia:
+    nombre: str
 
+class Carrera(Materia):
+    def __init__(self, nombre, materia):
+        Materia.__init__(self, nombre)
+        self.materia: str = materia
 
 # NO MODIFICAR - INICIO
 # Test parámetro obligatorio
